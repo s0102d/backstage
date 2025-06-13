@@ -4,6 +4,8 @@ apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
   name: demo-system1
+  annotations:
+    github.com/project-slug: s0102d/backstage
 spec:
   owner: group:Demonstrators
 ---
@@ -14,7 +16,7 @@ kind: Component
 metadata:
   name: demo-app
   annotations:
-    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: s0102d/backstage
 spec:
   type: APP
   lifecycle: demo
@@ -28,6 +30,8 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: demo-app-api
+  annotations:
+    github.com/project-slug: s0102d/backstage
 spec:
   type: REST-API
   lifecycle: demo
