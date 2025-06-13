@@ -1,40 +1,9 @@
----
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-system
-apiVersion: backstage.io/v1alpha1
-kind: System
-metadata:
-  name: demo-system1
-  annotations:
-    github.com/project-slug: s0102d/backstage
-spec:
-  owner: group:Demonstrators
----
-
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: demo-app
+  name: backstage
   annotations:
     github.com/project-slug: s0102d/backstage
 spec:
-  type: APP
-  lifecycle: demo
-  owner: group:Demonstrators
-  system: demo-system1
-  providesApis: [demo-app-api]
----
-
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
-apiVersion: backstage.io/v1alpha1
-kind: API
-metadata:
-  name: demo-app-api
-  annotations:
-    github.com/project-slug: s0102d/backstage
-spec:
-  type: REST-API
-  lifecycle: demo
-  owner: group:Demonstrators
-  system: demo-system1
-  definition: demo definition
+  type: other
+  lifecycle: unknown
